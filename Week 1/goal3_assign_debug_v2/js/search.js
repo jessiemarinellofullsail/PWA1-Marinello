@@ -40,17 +40,18 @@
         var search = function(query) //--NOTE-- This statements needs to be followed by a semi colon. Assign variable to query function
 
         // split the user's search query string into an array
-        var queryArray = query.join(" "); // I THINK that this joins an array into string using given separator, " " because arrays require iteration to perform pattern searching
+        var queryArray = query.join(" "); // I THINK that this joins an array into string using given separator, " ". --NOTE-- This should probably be .split
 
         // array to store matched results from database.js
-        var results = [];
+        var results = []; //create results variable to store matched results from database
 
-        // loop through each index of db array
+        // loop through each index of db (database.js) array
         for(var i=0, j=db.length; i<j; i++){
 
             // each db[i] is a single video item, each title ends with a pipe "|"
             // save a lowercase variable of the video title
-            var dbTitleEnd = db[i].indexOf('|');
+            var dbTitleEnd = db[i].indexOf('|'); //indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex,returns -1 if the value is not found. --NOTE-- I'm not sure WHY the pipe is being called. I think the db[i] is being searched to locate values that match the query
+
             var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
 
             // loop through the user's search query words
