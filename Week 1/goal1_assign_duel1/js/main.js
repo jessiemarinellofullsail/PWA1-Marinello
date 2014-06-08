@@ -52,18 +52,18 @@
             playerOneHealth-=f1;
             playerTwoHealth-=f2;
 
-            //
+            //console "points" that are being subtracted from each player's health
             console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);
 
             //check for victor
-            var result = winnerCheck();
+            var result = winnerCheck(); //create variable to hold result, using winnerCheck function
             console.log(result);
-            if (result==="no winner")
+            if (result==="no winner") //if result in winnerCheck strictly equals variable of no winner, then code will loop and add another round
             {
                 round++; //increment round by one (round one goes to round two, so on
                 alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth); //alert user that new round is beginning
 
-            } else{
+            } else{ //if there is a result that does not strictly equal no winner, than there is a winner; alert user to winner
                 alert(result);
                 break; //break command is used to escape out of the loop if the fight is over before the 10 rounds is reached
             };
@@ -75,16 +75,16 @@
     //this function is invoked after each round and returns a string of either the winner, the loser, a tie (both die) or no winner yet. This function does the conditional logic to determine if there is a winner or not
     function winnerCheck(){
         var result="no winner";
-        if (playerOneHealth<1 && playerTwoHealth<1)
+        if (playerOneHealth<1 && playerTwoHealth<1) //if player 1 health is less than one AND player 2 health is less than 1, then there will be a result that both players die
         {
             result = "You Both Die";
-        } else if(playerOneHealth<1){
+        } else if(playerOneHealth<1){ //if above condition is not met, then if player 1 health is less than one, then player 2 wins
             result =playerTwoName+" WINS!!!"
-        } else if (playerTwoHealth<1)
+        } else if (playerTwoHealth<1) //if above condition is not met, then if player 2 health is less than one, then player 1 wins
         {
             result = playerOneName+" WINS!!!"
         };
-        return result;
+        return result; //return winnerCheck information to results variable to use that information again
     };
 
     /*******  The program gets started below *******/
