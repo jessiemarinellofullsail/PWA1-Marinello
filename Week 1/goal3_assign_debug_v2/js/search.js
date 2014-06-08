@@ -127,4 +127,4 @@
                 return false;
                 ;
 
-            })();
+            })(); //--NOTE-- Unnecessary ()
