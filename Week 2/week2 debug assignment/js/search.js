@@ -27,7 +27,7 @@ var validate = function(query){
 
         // Check search length, must have 3 characters
         if(query.length < 3){ //IF loop to determine is the length of the query search term is too short, or less than 3, to alert the user
-            alert("Your search query is too small, try again."); //added closing quotes
+            alert("Your search query is too small, try again.");
 
 
 // (DO NOT FIX THE LINE DIRECTLY BELOW)
@@ -42,7 +42,7 @@ var validate = function(query){
     var search = function(query){ //--NOTE-- This statements needs to be followed by a semi colon. Assign variable to query function
         console.log("In search function");
 // split the user's search query string into an array
-    var queryArray = query.split(" "); 
+    var queryArray = query.split(" ");
         console.log(queryArray);
 // array to store matched results from database.js
     var results = []; //create results variable to store matched results from database; store result
