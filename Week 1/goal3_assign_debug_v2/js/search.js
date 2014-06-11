@@ -57,14 +57,15 @@
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
-            for(var ii=0, jj=queryArray.length; ii<jj; ii++){
-                var qitem = queryArray[ii].tolowercase(); //I think this needs to be lower case so that the user matches the host
+            for(var ii=0, jj=queryArray.length; ii<jj; ii++){ //if ii is less than the length of the query, increment by 1 and loop again
+                var qitem = queryArray[ii].tolowercase(); //qItem = an item in the query array
+                //I think this needs to be lower case so that the user matches the host
                 //--NOTE-- above variable should be camel case qItem, even better would be queryItem
 
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array
                 var compare = dbitem.indexOf(qitem); //--NOTE--change dbitem and qitem to camel case
-                if(compare !== -1){ //If it is not equal to -1, than I believe that the item CAN be found, which should push the database results to results
+                if(compare !== -1){ //If it is not equal to -1, then I believe that the item CAN be found, which should push the database results to results
                     results.push(db[i]); //items are pushed into the db array index
                 };
                 ; //Unnecessary semi colons?
