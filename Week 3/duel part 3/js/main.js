@@ -29,6 +29,13 @@ round_txt.innerHTML = "Click FIGHT button to start!";
 fighter1Health.innerHTML = fighterArray[0].name + ":" + fighterArray[0].health;
 fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
 
+//Create FIGHT function
+function fight(){
+    console.log('inside fight function');
+    //alert(fighters[o].name + ":" + fighters[0].health + "*START*" + fighters[1].name + ":" + fighters[1].health);
+    fighter1Health.innerHTML = fighterArray[0].name + ":" + fighterArray[0].health;
+    fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
+
 
 
 
