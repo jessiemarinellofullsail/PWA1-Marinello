@@ -5,6 +5,12 @@
 // self-executing function
 
 
+console.log("FIGHT!!!"); //Console acknowledgment
+
+var fighterArray = []; //create an empty literal array
+fighterArray.push({name:'Spiderman', damage:20, health:100}); //adding object to array
+fighterArray.push({name:'Batman', damage:22, health:100}); //adding object to array
+
 
 
 
