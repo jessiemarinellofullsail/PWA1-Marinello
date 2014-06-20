@@ -70,7 +70,20 @@ function fight(){
     }
 }
 
+//create winnerCheck function
+function winnerCheck(){
+    var result = "no winner";
+    if(fighterArray[0].health < 1 && fighterArray[1].health < 1){
+        result = "You both DIE - GAME OVER";
+    }else if(fighterArray[0].health < 1){
+        result = fighterArray[1].name + "Wins!";
+    }else if(fighterArray[1].health < 1){
+        result = fighterArray[0].name + "Wins!"
+    }
+    return result;
+}
 
+});
 
 
 
