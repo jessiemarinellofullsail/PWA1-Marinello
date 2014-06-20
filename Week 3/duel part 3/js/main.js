@@ -11,7 +11,14 @@ var fighterArray = []; //create an empty literal array
 fighterArray.push({name:'Spiderman', damage:20, health:100}); //adding object to array
 fighterArray.push({name:'Batman', damage:22, health:100}); //adding object to array
 
-
+//Define DOM pieces in order to access and define HTML tags
+//# sign is not needed if using getElementByID
+//# sign is needed is using querySelector
+var fightTitle = document.querySelector("#title");
+var fighter1Health = document.querySelector("#player1_health");
+var fighter2Health = document.querySelector("#player2_health");
+var round_txt = document.querySelector("#fight_text");
+var fight_button = document.getElementById("fight_button");
 
 
 
