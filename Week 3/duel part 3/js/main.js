@@ -31,7 +31,7 @@ fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
 
 //Create FIGHT function
 function fight(){
-    console.log('inside fight function');
+    console.log('inside fight function'); //notice to console that I've made it into the fight function
     //alert(fighters[o].name + ":" + fighters[0].health + "*START*" + fighters[1].name + ":" + fighters[1].health);
     fighter1Health.innerHTML = fighterArray[0].name + ":" + fighterArray[0].health;
     fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
@@ -39,6 +39,12 @@ function fight(){
 //Determine damage using math.random formula (kept in comments below)
     var f1 = Math.floor(Math.random() * fighterArray[0].damage + fighterArray[0].damage *.5);
     var f2 = Math.floor(Math.random() * fighterArray[1].damage + fighterArray[1].damage *.5);
+
+//Inflict damage
+    fighterArray[0].health -= f1;
+    fighterArray[1].health -= f2;
+
+    console.log(fighterArray[0].health, fighterArray[1].health);
 
 
 
