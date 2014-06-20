@@ -53,6 +53,22 @@ function fight(){
     var result = winnerCheck();
     console.log(result);
 
+    round_txt.innerHTML = "Round " + round + " complete:";
+    round++;
+    if(result === "no winner"){
+        fighter1Health.innerHTML = fighterArray[0].name + ":" + fighterArray[0].health;
+        fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
+    }else{
+        fighter1Health.innerHTML = "";
+        fightTitle.innerHTML = result;
+        fighter2Health.innerHTML = "";
+
+        //Disable FIGHT button - need the below if using addEventListener
+        fight_button.removeEventListener("click", fight, false);
+
+        document.querySelector(".buttonblue").innerHTML = "Done!!";
+    }
+}
 
 
 
