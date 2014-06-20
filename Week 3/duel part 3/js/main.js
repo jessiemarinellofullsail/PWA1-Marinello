@@ -8,8 +8,8 @@
 console.log("FIGHT!!!"); //Console acknowledgment
 
 var fighterArray = []; //create an empty literal array
-fighterArray.push({name:'Spiderman', damage:20, health:100}); //adding object to array
-fighterArray.push({name:'Batman', damage:22, health:100}); //adding object to array
+fighterArray.push({name:'Spiderman', damage:20, health:100}); //adding object to array. fighterArray[0]
+fighterArray.push({name:'Batman', damage:22, health:100}); //adding object to array. fighterArray[1]
 
 //Define DOM pieces in order to access and define HTML tags
 //# sign is not needed if using getElementByID
@@ -23,6 +23,11 @@ var fight_button = document.getElementById("fight_button");
 //Set up click event
 //Don't use button.onclick=fight; Need more flexibility
 fight_button.addEventListener("click", fight, false); //when click happens will call fight function
+
+//Initialize DOM innerHTML text for top of HTML page
+round_txt.innerHTML = "Click FIGHT button to start!";
+fighter1Health.innerHTML = fighterArray[0].name + ":" + fighterArray[0].health;
+fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
 
 
 
