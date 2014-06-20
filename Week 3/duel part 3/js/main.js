@@ -3,7 +3,7 @@
 //June 2014
 
 // self-executing function
-
+window.addEventListener('load', function(){ //waits for window to load before running and firing function; prevents me from getting null error returned on querySelectors
 
 console.log("FIGHT!!!"); //Console acknowledgment
 
