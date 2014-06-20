@@ -20,6 +20,9 @@ var fighter2Health = document.querySelector("#player2_health");
 var round_txt = document.querySelector("#fight_text");
 var fight_button = document.getElementById("fight_button");
 
+//initialize round variable
+var round = 1;
+
 //Set up click event
 //Don't use button.onclick=fight; Need more flexibility
 fight_button.addEventListener("click", fight, false); //when click happens will call fight function
@@ -45,6 +48,10 @@ function fight(){
     fighterArray[1].health -= f2;
 
     console.log(fighterArray[0].health, fighterArray[1].health);
+
+//Check for winner
+    var result = winnerCheck();
+    console.log(result);
 
 
 
