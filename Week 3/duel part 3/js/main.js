@@ -1,5 +1,5 @@
 //Jessie Marinello
-//Duel 1 - Analyze
+//Duel Part 3 - DOM
 //June 2014
 
 // self-executing function
