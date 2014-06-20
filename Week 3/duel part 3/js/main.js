@@ -36,7 +36,9 @@ function fight(){
     fighter1Health.innerHTML = fighterArray[0].name + ":" + fighterArray[0].health;
     fighter2Health.innerHTML = fighterArray[1].name + ":" + fighterArray[1].health;
 
-
+//Determine damage using math.random formula (kept in comments below)
+    var f1 = Math.floor(Math.random() * fighterArray[0].damage + fighterArray[0].damage *.5);
+    var f2 = Math.floor(Math.random() * fighterArray[1].damage + fighterArray[1].damage *.5);
 
 
 
