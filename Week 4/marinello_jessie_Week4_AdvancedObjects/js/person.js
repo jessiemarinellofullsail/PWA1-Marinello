@@ -6,14 +6,14 @@
 //create self executing function
 (function(){
 
-//add the Person object to the global window object because main.js requires it
+    //add the Person object to the global window object because main.js requires it
     window.Person = Person;
 
-//define all possible job choices and actions for all the Person instances
+    //define all possible job choices and actions for all the Person instances
     Person.jobs = ["teacher", "actor", "student", "scuba diver"];
     Person.actions = ["sleeping", "eating", "working"];
 
-//constructor function
+    //constructor function
     function Person(name,row){ //pass parameters
         console.log("Person created: ", name);
 
@@ -37,7 +37,8 @@
         id.innerHTML = this.action;
     }
 
-//Person's update method. This function occurs 30 times a second and randomly determines if the action changes for each person
+    //Person's update method. This function occurs 30 times a second and randomly determines if the action changes for each person
+    //Use math methods to add functionality to Person
     Person.prototype.update = function(){
         if (Math.floor(Math.random() <.01)){
             var i = Math.floor(Math.random()*Person.actions.length);
