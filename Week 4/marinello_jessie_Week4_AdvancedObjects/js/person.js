@@ -37,15 +37,19 @@
         id.innerHTML = this.action;
     }
 
-    //Person's update method. This function occurs 30 times a second and randomly determines if the action changes for each person
+    //Person's update method. Randomly determines if the action changes for each person
     //Use math methods to add functionality to Person
-    Person.prototype.update = function(){
+    Person.update = function(){
         if (Math.floor(Math.random() <.01)){
             var i = Math.floor(Math.random()*Person.actions.length);
             this.action = Person.actions[i];
             var id = document.getElementById("r"+this.row+"c3");
             id.innerHTML = this.action;
         }
-    }
-})();
+    };
+});
+
+
+
+
 
