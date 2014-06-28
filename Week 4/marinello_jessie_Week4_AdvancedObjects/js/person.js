@@ -8,6 +8,7 @@
 
     //add the Person object to the global window object because main.js requires it
     window.Person = Person;
+    //console.log(Window.Person);
 
     //define all possible job choices and actions for all the Person instances
     Person.jobs = ["teacher", "actor", "student", "scuba diver"];
@@ -42,9 +43,9 @@
     Person.update = function(){
         if (Math.floor(Math.random() <.01)){
             var i = Math.floor(Math.random()*Person.actions.length);
-            this.action = Person.actions[i];
-            var id = document.getElementById("r"+this.row+"c3");
-            id.innerHTML = this.action;
+            this.action = Person.actions[i]; //this action prototype is = a action in Persons.actions
+            var id = document.getElementById("r"+this.row+"c3"); //define variable to use DOM to manipulate correct row/cell with new person action
+            id.innerHTML = this.action; //change action
         }
     };
 });

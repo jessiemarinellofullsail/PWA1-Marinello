@@ -57,16 +57,18 @@
     for (var i =0; i<numOfPeople; i++){
 
         //generate a number using the length of the names array (names.length, which is 6)
+        //this will randomly choose a name
         var personIndex = Math.floor(Math.random()*names.length);
 
         //use keyword to setup new Person object
-        var person = new Person(names[personIndex], i+1); //setting new objects (instantiate Person objects)
+        //setting new objects (instantiate Person objects)
+        //names array is sent to the constructor of the person; information is sent to person.js to constructor function, which has what row the name should be displayed in
+        var person = new Person(names[personIndex], i+1);
 
         populateHTML(person.name,"r"+(i+1)+"c1"); //populate cell 1 (c1) with name parameter from constructor function
         populateHTML(person.job,"r"+(i+1)+"c2"); //populate cell 2 (c2) with job parameter from constructor function
 
         //push the personIndex (new Person object that is created) into people array
-        //uses Math.random expression to randomly select 3 names from
         people.push(person);
 
         //adds/removes items to/from an array, and returns the removed item(s)
@@ -89,7 +91,7 @@
         id.innerHTML = data;
     }
 
-    //The loop should execute in the runUpdate() function that is called from the setInterval
+    //FOR EACH loop should execute in the runUpdate() function that is called from the setInterval
     function runUpdate(){
         people.forEach(function(element){
             //console.log(element);
